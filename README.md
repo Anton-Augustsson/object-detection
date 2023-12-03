@@ -13,3 +13,16 @@ mkdir -p Tensorflow Tensorflow/workspace Tensorflow/workspace/images Tensorflow/
 ```
 
 If you want even more information about collecting images to train on look at [labelImg](https://github.com/HumanSignal/labelImg).
+
+## Runing Tensorflow on Raspberry PI
+- [RPI camera module](https://www.raspberrypi.com/documentation/computers/camera_software.html#getting-started)
+- [More about RPI camera module](https://www.raspberrypi.com/documentation/accessories/camera.html#libcamera-and-libcamera-apps)
+- [Tensorflow Lite on RPI](https://github.com/tensorflow/examples/tree/master/lite/examples/object_detection/raspberry_pi)
+
+### Video tutorial
+- [1: Introduction to object detection on Raspberry Pi](https://www.youtube.com/watch?v=mNjXEybFn98)
+- [2: Train a custom object detection model using your data](https://www.youtube.com/watch?v=-ZyFYniGUsw)
+- [3: Choose an object detection model architecture for Raspberry Pi](https://www.youtube.com/watch?v=twtBcfonSyE)
+- [4: Make object detection faster by using Coral](https://www.youtube.com/watch?v=QqTLkw1IenI)
+
+
