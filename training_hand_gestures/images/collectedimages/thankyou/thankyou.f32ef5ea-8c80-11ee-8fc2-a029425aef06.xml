@@ -1,0 +1,26 @@
+<annotation>
+	<folder>thankyou</folder>
+	<filename>thankyou.f32ef5ea-8c80-11ee-8fc2-a029425aef06.jpg</filename>
+	<path>/home/anau/Dev/object-detection/Tensorflow/workspace/images/collectedimages/thankyou/thankyou.f32ef5ea-8c80-11ee-8fc2-a029425aef06.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>480</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>ThankYou</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>367</xmin>
+			<ymin>272</ymin>
+			<xmax>475</xmax>
+			<ymax>345</ymax>
+		</bndbox>
+	</object>
+</annotation>

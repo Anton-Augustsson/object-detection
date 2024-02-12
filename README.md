@@ -14,10 +14,48 @@ mkdir -p Tensorflow Tensorflow/workspace Tensorflow/workspace/images Tensorflow/
 
 If you want even more information about collecting images to train on look at [labelImg](https://github.com/HumanSignal/labelImg).
 
-## Runing Tensorflow on Raspberry PI
+
+## Creating a custom Tensorflow model for object detection
+- [Tensorflow Object Detection API](https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/install.html#tensorflow-object-detection-api-installation) for dependencies and detailed instructions.
+- [Installation](https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/install.html#downloading-the-tensorflow-model-garden)
+- [Tutorial](https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/training.html)
+- [Export your model](https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/auto_examples/plot_object_detection_saved_model_tf1.html#sphx-glr-auto-examples-plot-object-detection-saved-model-tf1-py)
+
+
+### Collect and prepare data
+1. Capture image with for instance `opencv` or phone.
+2. Label images with `labelimg`.
+3. Split images into test and train folders.
+
+TODO: Collect and label directly on your computer, i,e., not in a docker container, since you need a GUI interface. Install dependencies from requirements.txt and then run script ...
+
+### Train model and export it
+1. bla
+2. Download a pre-trained model from [tf2 detection zoo](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf2_detection_zoo.md).
+
+TODO: create docker file with OD API installed
+
+TODO: Train your model and export it inside the docker container based using the docker file provided in the repository. Instruction ...
+
+A docker file is provided, which has Tensorflow and Tensorflow object detection api pre installed. To build the image run:
+```bash
+docker build -t object-detection-image .
+```
+Then to run the container and subsequently train your model, run:
+```bash
+docker run -it -v $(pwd)/training_hand_gestures:/TensorFlow/workspace object-detection-image bash
+```
+
+
+## Running Tensorflow on Raspberry PI
 - [RPI camera module](https://www.raspberrypi.com/documentation/computers/camera_software.html#getting-started)
 - [More about RPI camera module](https://www.raspberrypi.com/documentation/accessories/camera.html#libcamera-and-libcamera-apps)
 - [Tensorflow Lite on RPI](https://github.com/tensorflow/examples/tree/master/lite/examples/object_detection/raspberry_pi)
+
+TODO: Use tensorflow lite to use the custom tensor flow lite model that was created in the previous step. Instructions ...
+
+### Tensorflow lite C++
+- [play_with_tflite](https://github.com/iwatake2222/play_with_tflite)
 
 ### Video tutorial
 - [1: Introduction to object detection on Raspberry Pi](https://www.youtube.com/watch?v=mNjXEybFn98)
@@ -26,3 +64,15 @@ If you want even more information about collecting images to train on look at [l
 - [4: Make object detection faster by using Coral](https://www.youtube.com/watch?v=QqTLkw1IenI)
 
 
+### Tensorflow lite for Raspberry pi 4 bookworm with Pi camera module
+#### Setting up Pi camera module
+Initially the camera module may not be able to use until a you have done a full upgrade
+```bash
+sudo apt update
+sudo apt full-upgrade
+``` 
+Then you should be able to run 
+```bash
+rpicam-hello
+```
+To test your camera.

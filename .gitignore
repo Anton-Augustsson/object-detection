@@ -1,2 +1,4 @@
 Tensorflow/*
 tfod/*
+training_hand_gestures/pre-trained-models/*
+training_hand_gestures/models/*
